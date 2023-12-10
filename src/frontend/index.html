@@ -26,21 +26,36 @@
 
         <main>
             <div class="container">
+                 <!-- Modal Trigger -->
+                 <p>
+                    <label>
+                        <input type="checkbox" id="cb" />
+                        <span>Prender</span>
+                    </label>
+                 </p>
+                <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <div class="col s12 m6 16">
+                            <h1>Cargar usuario</h1>
+                            <label for="iNombre"> Nombre de usuario</label>
+                            <input id="iNombre" type="text" value="" placeholder="Escriba su nombre"/>
+                            <label for="iDNI"> DNI</label>
+                            <input id="iDNI" type="number" value="" placeholder="Escriba su DNI"/>
+                            <label for="iPassword">Contraseña</label>
+                            <input id="iPassword" type="password" placeholder="Ingrese su contraseña" value=""/>
+                            <p id="pInfo"></p>
+                            <button id="btnGuardar" class="modal-close btn">Guardar</button>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col s12 m6 xl6">
                         <h1>Dispositivos</h1>
                         <textarea id="textarea_2" class="cuadrotextarea2" + materialize-textarea style="height: 150px;" readonly></textarea>
-                    </div>
-                    <div class="col s12 m6 xl6">
-                        <h1>Cargar usuario</h1>
-                        <label for="iNombre"> Nombre de usuario</label>
-                        <input id="iNombre" type="text" value="" placeholder="Escriba su nombre"/>
-                        <label for="iDNI"> DNI</label>
-                        <input id="iDNI" type="number" value="" placeholder="Escriba su DNI"/>
-                        <label for="iPassword">Contraseña</label>
-                        <input id="iPassword" type="password" placeholder="Ingrese su contraseña" value=""/>
-                        <p id="pInfo"></p>
-                        <button id="btnGuardar" class="btn">Guardar</button>
+                        <ul class="collection" id="listaDisp">
+                        </ul>
                     </div>
                 </div>
                 <br/>
