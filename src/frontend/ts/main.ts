@@ -22,16 +22,15 @@ class Main implements EventListenerObject {
                     let datos: Array<Device>=JSON.parse(respuesta);
 
                     let ul = document.getElementById("listaDisp");
+                    //let cambiarestado:string;
 
                     for (let d of datos){
                         let itemList= `<li class="collection-item avatar">
                         <img src= `;
-                            if (d.type==1) {
-                               itemList+= `"./static/images/Lampara.jpg" alt="" class="circle"`;
-                            } else if (d.type==2) {
-                                itemList+= `"./static/images/Ventilador.jpg" alt="" class="circle"`;
-                            } else if (d.type==3) {
-                                itemList+= `"./static/images/Televisor.jpg" alt="" class="circle"`;
+                            if (d.type==0) {
+                                itemList+= `"./static/images/Lampara.jpg" alt="" class="circle"`;
+                            } else if (d.type==1) {
+                                itemList+= `"./static/images/Persiana.JPG" alt="" class="circle"`;
                             }
                             itemList += `<span class="title">${d.name}</span>
                             <p>
@@ -45,8 +44,8 @@ class Main implements EventListenerObject {
                                         itemList+= `nuevoAtt="${d.id}" id="cb_${d.id}"`
                                             if (d.state) {
                                                 itemList+= `checked`;
-                                            }
-                                            itemList+= `>
+                                            } 
+                                            itemList+= `>            
                                         <span class="lever"></span>
                                         On
                                     </label>
@@ -72,7 +71,7 @@ class Main implements EventListenerObject {
             }
         }
         //xmlRequest.open("GET",`http://localhost:8000/otraCosa/"${d.id}"/"${d.name}"`,true)
-        xmlRequest.open("GET","http://localhost:8000/devices",true)
+        xmlRequest.open("GET","http://localhost:8000/devices/",true)
         xmlRequest.send();
     }
     private cargarUsuario(): void{ //Función que permite cargar usuario considerando los item obligatorios
