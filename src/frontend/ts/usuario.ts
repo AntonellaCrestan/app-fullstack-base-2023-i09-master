@@ -11,7 +11,7 @@ class Usuario extends Persona {
     }
 
     public mostrar():string{
-      return `${this.nombre}-${this.rol}-${this.password}`;
+      return `Hola ${this.nombre}-${this.rol}`;
     }
 }
 

@@ -46,7 +46,23 @@ app.post("/device",(req,res,next) => {
         }  
 });
 
+//POST para crear un nuevo dispositivo
+app.post("/nuevodevice",(req,res,next) => {
+    const {dispID,dispNAME,dispDESCRIPTION,dispSTATE,dispTYPE} = req.body;
+    const query= `INSERT INTO Devices (id, name, description, state, type) VALUES (?, ?, ?, ?, ?)`;
+    utils.query(query, [dispID, dispNAME, dispDESCRIPTION, dispSTATE, dispTYPE], (error, results, fields) => {
+        if (error) {
+            console.error("Error al insertar en la base de datos:", error);
+            res.status(500).send("Error al insertar en la base de datos.");
+        } else {
+            console.log("Inserción exitosa en la base de datos.");
+            res.status(200).send("Inserción exitosa en la base de datos.");
+        }
+    });
+});
+
 // GET para cargar en localhost:8000/devices todos los dispositivos de la base de datos. 
+
 app.get('/devices/', function(req, res, next) {
     
     utils.query("select * from Devices",(err,rsp,fields)=>{

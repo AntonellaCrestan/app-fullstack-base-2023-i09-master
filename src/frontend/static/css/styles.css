@@ -28,3 +28,20 @@ main {
     font-family:Lucida Sans;
     color:rgb(255, 255, 255);
 }
+
+#CompInfo {
+    font-family: Gill Sans MT;
+}
+
+#BvSmartHome {
+    font-family: Franklin Gothic Medium;
+    color: rgb(125, 32, 138);
+}
+
+#btnListar {
+    width: 200px;
+}
+
+#btnMas {
+    font-size: xx-large;
+}

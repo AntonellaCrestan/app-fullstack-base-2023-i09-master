@@ -54,8 +54,14 @@ Si pudiste acceder al cliente web y al administrador significa que la aplicació
 > Si te aparece un error la primera vez que corres la app, deteńe el proceso y volvé a iniciarla. Esto es debido a que el backend espera que la DB esté creada al iniciar, y en la primera ejecución puede no alcanzar a crearse. A partir de la segunda vez el problema queda solucionado.
 
 </details>
-
 Continuá explorando el proyecto una vez que lo tengas funcionando.
+
+<h1> Bienvenido a su Smart Home </h1>
+<p>
+Lo primero que debe realizar es cargar su nombre de usuario, DNI y contraseña. Recuerde que el DNI debe tener 8 caracteres. Si el nombre se carga correctamente podrá visualizar su nombre debajo. 
+
+Luego "Liste sus dispositivos" para verificar el estado de sus dispositivos ya agregados. Si tiene uno adicional no dude en agregarlo haciendo clic en "+".
+
 
 ## Configuraciones de funcionamiento 🔩
 
